@@ -6,32 +6,37 @@
 - **Docker 资源**: 自动清理相关的容器和数据卷。
 - **本地数据**: 彻底删除 `~/.openclaw` 目录（包含配置、对话记录、凭据和 Skills）。
 
-## ⚡ 极速卸载 (推荐)
+## ⚡ 极速卸载 (最高优推荐)
 
-如果您希望最快地完成卸载，只需在终端中复制并执行以下**一行命令**：
+为了让卸载变得最简单，我们准备了**双击即运行**的服务脚本：
 
-### Windows (PowerShell)
+### Windows 用户
+1. 下载整个仓库或仅下载 `Double-click-to-uninstall.bat`。
+2. **双击**运行 `Double-click-to-uninstall.bat` 即可。
+
+### macOS / Linux 用户
+1. 下载 `Double-click-to-uninstall.sh`。
+2. 在终端运行 `chmod +x Double-click-to-uninstall.sh` (仅需一次)。
+3. 此后只需**双击**该文件即可运行。
+
+---
+
+## 🛠️ 其他高级用法
+
+### A. 命令行一键卸载 (适合开发者)
+如果您习惯使用命令行，直接复制执行：
+
+**Windows (PowerShell):**
 ```powershell
 iwr -useb https://raw.githubusercontent.com/147qaz258-ead/Deleteclaw/main/scripts/uninstall.ps1 | iex
 ```
 
-### macOS / Linux / WSL (Bash)
+**macOS / Linux:**
 ```bash
 curl -fsSL https://raw.githubusercontent.com/147qaz258-ead/Deleteclaw/main/scripts/uninstall.sh | bash
 ```
 
----
-
-## 🚀 其他使用方法
-
-### 独立二进制运行
-如果您不方便联网执行脚本，可以在 [Releases](https://github.com/147qaz258-ead/Deleteclaw/releases) 页面下载编译好的二进制文件：
-
-- **Windows:** 双击 `deleteclaw-win.exe`
-- **macOS/Linux:** `chmod +x deleteclaw && ./deleteclaw`
-
-### 使用 Node.js 运行
-
+### B. 使用 npx 运行
 如果您已安装 Node.js，也可以直接通过 npm 运行：
 
 ```bash
