@@ -93,6 +93,12 @@ async function run() {
   console.log(chalk.bold.green('\n✨ 卸载完成！'));
   console.log(chalk.cyan('如果您还安装了全局 NPM 包，请运行：'));
   console.log('   npm uninstall -g openclaw\n');
+
+  await prompts({
+    type: 'text',
+    name: 'exit',
+    message: chalk.gray('请按回车键退出...')
+  });
 }
 
 function execute(cmd, description, ignoreError = false) {
