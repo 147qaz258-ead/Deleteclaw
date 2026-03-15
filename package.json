@@ -1,0 +1,29 @@
+{
+  "name": "deleteclaw",
+  "version": "1.0.0",
+  "description": "One-click uninstaller for OpenClaw (Windows, macOS, Linux)",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "deleteclaw": "./index.js"
+  },
+  "scripts": {
+    "test": "node index.js --dry-run",
+    "build": "pkg . --out-path dist"
+  },
+  "keywords": [
+    "openclaw",
+    "uninstaller",
+    "cleaner"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.0.0",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.1"
+  }
+}
