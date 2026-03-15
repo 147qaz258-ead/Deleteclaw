@@ -6,22 +6,29 @@
 - **Docker 资源**: 自动清理相关的容器和数据卷。
 - **本地数据**: 彻底删除 `~/.openclaw` 目录（包含配置、对话记录、凭据和 Skills）。
 
-## 🚀 使用方法
+## ⚡ 极速卸载 (推荐)
 
-### 直接运行 (推荐)
+如果您希望最快地完成卸载，只需在终端中复制并执行以下**一行命令**：
 
-在该工具的 [Releases](https://github.com/147qaz258-ead/Deleteclaw/releases) 页面下载适合您系统的二进制文件，然后在终端运行：
-
-**Windows:**
+### Windows (PowerShell)
 ```powershell
-.\deleteclaw-win.exe
+iwr -useb https://raw.githubusercontent.com/147qaz258-ead/Deleteclaw/main/scripts/uninstall.ps1 | iex
 ```
 
-**macOS / Linux:**
+### macOS / Linux / WSL (Bash)
 ```bash
-chmod +x deleteclaw-macos # 或 deleteclaw-linux
-./deleteclaw-macos
+curl -fsSL https://raw.githubusercontent.com/147qaz258-ead/Deleteclaw/main/scripts/uninstall.sh | bash
 ```
+
+---
+
+## 🚀 其他使用方法
+
+### 独立二进制运行
+如果您不方便联网执行脚本，可以在 [Releases](https://github.com/147qaz258-ead/Deleteclaw/releases) 页面下载编译好的二进制文件：
+
+- **Windows:** 双击 `deleteclaw-win.exe`
+- **macOS/Linux:** `chmod +x deleteclaw && ./deleteclaw`
 
 ### 使用 Node.js 运行
 
